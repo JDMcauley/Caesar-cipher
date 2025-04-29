@@ -1,7 +1,15 @@
-
+const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 function encode() {
     let unencodedText = document.getElementById("unencodedText").value
-    let cipherNumber = document.getElementById("cipherSelector").value
-    document.getElementById("encodedText").value = unencodedText
+    let encodedMessage = ""
+    
+    for (const char of unencodedText) {
+        let cipherNumber = document.getElementById("cipherSelector").value
+        let index = alphabet.indexOf(char) + Number(cipherNumber)
+        let encodedChar = alphabet[index]
+        encodedMessage = encodedMessage + encodedChar
+    }
+
+    document.getElementById("encodedText").value = encodedMessage
 }
