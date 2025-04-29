@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Caesar Cipher</title>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-start pt-10 px-4 font-mono">
+    <h1 class="text-3xl font-bold mb-10">Caesar Cipher</h1>
+    <div class="w-full max-w-md space-y-8 text-xs">
+        <div id="unencodedText" class="bg-gray-800 p-6 rounded shadow text-center">
+            <p class="mb-3">Enter text for encoding</p>
+            <input type="text" class="w-full p-3 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div id="cipherSelector" class="bg-gray-800 p-3 flex flex-col items-center rounded shadow w-[75%] mx-auto">
+            <p class="mb-3">Enter cipher number here</p>
+            <input type="" class="w-[25%] p-3 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div id="encodedText" class="bg-gray-800 p-6 rounded shadow text-center">
+            <p class="mb-3">Encoded text:</p>
+            <input readonly class="w-full p-3 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        </div>
+    </div>
+</body>
+</html>
