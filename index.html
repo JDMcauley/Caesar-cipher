@@ -6,20 +6,26 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Caesar Cipher</title>
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-start pt-10 px-4 font-mono">
-    <h1 class="text-3xl font-bold mb-10">Caesar Cipher</h1>
-    <div class="w-full max-w-md space-y-8 text-xs">
-        <div class="bg-gray-800 p-6 rounded shadow text-center">
+<body class="bg-gray-900 text-white min-h-screen items-center justify-start pt-10 px-4 font-mono">
+    <h1 class="text-3xl font-bold mb-7 row-start-1 text-center">Caesar Cipher</h1>
+    <div class="w-full max-w-md space-y-5 text-xs grid grid-cols-2 grid-rows-3">
+        <div class="bg-gray-800 p-6 rounded shadow text-center col-span-2 row-start-1">
             <p class="mb-3">Enter text for encoding</p>
             <input type="text" id="unencodedText" class="w-full p-3 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
         </div>
-        <div class="bg-gray-800 p-3 flex flex-col items-center rounded shadow w-[75%] mx-auto">
-            <p class="mb-3">Enter cipher number here</p>
-            <input id="cipherSelector" type="" class="w-[25%] p-3 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <div class="bg-gray-800 p-3 flex flex-col items-center rounded shadow w-full mr-2 col-span-1 row-start-2 text-center">
+            <p class="mb-3">Toggle encode/decode</p>
+            <label class="switch cursor-pointer">
+                <input type="checkbox" id="decodeToggle">
+            </label>
         </div>
-        <div class="bg-gray-800 p-6 rounded shadow text-center">
-            <button onclick="encode()" class="mb-3 px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded hover:bg-gray-600">Encode Text</button>
-            <input readonly id="encodedText" class="w-full p-3 bg-gray-700 text-white rounded border border-gray-600"></textarea>
+        <div class="bg-gray-800 p-3 flex flex-col items-center rounded shadow w-full ml-2 col-span-1 row-start-2 text-center">
+            <p class="mb-3">Enter cipher number here</p>
+            <input id="cipherSelector" type="" class="w-[25%] p-3 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 ">
+        </div>
+        <div class="bg-gray-800 p-6 rounded shadow text-center col-span-2 row-start-3">
+            <input readonly id="encodedText" class="w-full p-3 bg-gray-700 text-white rounded border border-gray-600 mb-4"></textarea>
+            <button onclick="encode()" class="px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded hover:bg-gray-600">Encode Text</button>
         </div>
     </div>
     <script src="index.js"></script>
